@@ -1,0 +1,51 @@
+
+services:
+  ai_trainer:
+    build: ./trainer
+    container_name: ai_trainer
+    ports:
+      - "8090:8090"
+    restart: on-failure
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ./models:/models
+      - ./trainer_logs:/trainer_logs
+
+  ai_monitor:
+    build: ./monitor
+    container_name: ai_monitor
+    ports:
+      - "8070:8070"
+    restart: always
+    volumes:
+      - ./logs:/logs
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  
+  ai_frontend:
+    build: ./frontend
+    container_name: ai_frontend
+    ports:
+      - "8050:8050"
+    restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+
+  ai_api_blue:
+    profiles: ["blue"]
+    container_name: ai_api_blue
+    image: ai-deploy-project-ai_api_blue
+
+  ai_api_green:
+    profiles: ["green"]
+    container_name: ai_api_green
+    image: ai-deploy-project-ai_api_green

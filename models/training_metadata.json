@@ -1,0 +1,9 @@
+{
+    "model_name": "model_v20251127_092038.pth",
+    "accuracy": 0.8472,
+    "loss": 34.2492,
+    "epochs": 1,
+    "device": "cuda",
+    "train_time_sec": 544.11,
+    "finished_at": "2025-11-27 09:20:38"
+}

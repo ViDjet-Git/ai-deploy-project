@@ -1,0 +1,56 @@
+[
+    {
+        "timestamp": "2025-11-01 12:35:56",
+        "epochs": 2,
+        "batch_size": 64,
+        "lr": 0.001,
+        "accuracy": 0.8846,
+        "saved_model": "model_v20251101_125225.pth",
+        "duration_min": 16.48
+    },
+    {
+        "timestamp": "2025-11-01 15:09:18",
+        "epochs": 1,
+        "batch_size": 64,
+        "lr": 0.001,
+        "accuracy": 0.843,
+        "saved_model": "model_v20251101_151753.pth",
+        "duration_min": 8.58
+    },
+    {
+        "timestamp": "2025-11-04 22:15:43",
+        "epochs": 5,
+        "batch_size": 64,
+        "lr": 0.001,
+        "accuracy": 0.873,
+        "saved_model": "model_v20251104_225135.pth",
+        "duration_min": 35.87
+    },
+    {
+        "timestamp": "2025-11-21 01:55:53",
+        "epochs": 1,
+        "batch_size": 64,
+        "lr": 0.001,
+        "accuracy": 0.8402,
+        "saved_model": "model_v20251121_021108.pth",
+        "duration_min": 15.27
+    },
+    {
+        "timestamp": "2025-11-26 08:29:03",
+        "epochs": 3,
+        "batch_size": 64,
+        "lr": 0.001,
+        "accuracy": 0.8916,
+        "saved_model": "model_v20251126_085138.pth",
+        "duration_min": 22.6
+    },
+    {
+        "timestamp": "2025-11-27 09:11:34",
+        "epochs": 1,
+        "batch_size": 64,
+        "lr": 0.001,
+        "accuracy": 0.8472,
+        "saved_model": "model_v20251127_092038.pth",
+        "duration_min": 9.07
+    }
+]
